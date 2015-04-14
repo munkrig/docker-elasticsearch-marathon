@@ -1,4 +1,4 @@
-FROM barnybug/elasticsearch:1.4.4
+FROM tobilg/elasticsearch:latest
 
 RUN apt-get -y update
 RUN apt-get -y install curl ruby
