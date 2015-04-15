@@ -14,7 +14,7 @@ curl -XPOST 'http://127.0.0.1:8080/v2/apps' -d '{
 	"env": {
 		"MARATHON_URL": "http://127.0.0.1:8080",
 		"APP_ID": "es-cluster",
-		"ELASTICSEARCH_CLUSTER_NAME": "AIC"
+		"ELASTICSEARCH_CLUSTER_NAME": "MYCLUSTER"
 	},
     "container": {
         "docker": {
