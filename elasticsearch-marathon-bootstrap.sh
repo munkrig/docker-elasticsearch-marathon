@@ -10,6 +10,9 @@ exec /elasticsearch/bin/elasticsearch \
 --network.publish_host=${HOST} \
 --discovery.zen.ping.multicast.enabled=false \
 --discovery.zen.ping.unicast.hosts=${hosts} \
+--discovery.zen.ping_timeout=30s \
+--discovery.zen.join_timeout=300s \
+--discovery.zen.publish_timeout=300s \
 --http.port=9200 \
 --transport.tcp.port=9300 \
 --transport.publish_port=${PORT0}
