@@ -10,7 +10,12 @@ So, if your Marathon instance is running at http://127.0.0.1:8080 your request c
 
 ```
 curl -XPOST 'http://127.0.0.1:8080/v2/apps' -d '{
-    "id": "es-cluster", 
+    "id": "es-cluster",
+	"env": {
+		"MARATHON_URL": "http://127.0.0.1:8080",
+		"APP_ID": "es-cluster",
+		"ELASTICSEARCH_CLUSTER_NAME": "AIC"
+	},
     "container": {
         "docker": {
             "image": "tobilg/elasticsearch-marathon",
@@ -18,11 +23,6 @@ curl -XPOST 'http://127.0.0.1:8080/v2/apps' -d '{
             "portMappings": [
                 { "containerPort": 9200 },
                 { "containerPort": 9300 }
-            ],
-            "parameters": [
-                { "key": "MARATHON_URL", "value": "http://127.0.0.1:8080" },
-                { "key": "APP_ID", "value": "es-cluster" },
-                { "key": "ELASTICSEARCH_CLUSTER_NAME", "value": "MYCLUSTER" }
             ]
         },
         "type": "DOCKER"
