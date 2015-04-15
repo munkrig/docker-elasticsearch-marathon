@@ -8,4 +8,6 @@ RUN apt-get install -y nodejs
 ADD ./elasticsearch-marathon-bootstrap.sh /usr/local/bin/
 ADD ./elasticsearches.js /usr/local/bin/
 
+RUN chmod +x /usr/local/bin/elasticsearches.js
+
 CMD "/usr/local/bin/elasticsearch-marathon-bootstrap.sh"
