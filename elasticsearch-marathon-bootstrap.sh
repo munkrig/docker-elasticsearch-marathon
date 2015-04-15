@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hosts=$(/usr/local/bin/elasticsearches.rb $MARATHON_URL $APP_ID)
+hosts=$(/usr/local/bin/elasticsearches.js $MARATHON_URL $APP_ID)
 node_name="${APP_ID}-${PORT0}"
 cluster_name="${ELASTICSEARCH_CLUSTER_NAME}"
 
