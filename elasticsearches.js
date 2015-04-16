@@ -31,7 +31,7 @@ if  (marathonUrl && appId) {
 	    var apps = JSON.parse(data.toString()).tasks;
 		var output = [];
 		apps.forEach(function(element, index, array) {
-			output.push(element.host + ':' + element.ports[0]);
+			output.push(element.host + ':' + element.ports[1]);
 		});
 		console.log(output.join(','));
 	  });
