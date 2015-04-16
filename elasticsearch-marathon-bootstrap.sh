@@ -15,4 +15,4 @@ exec /elasticsearch/bin/elasticsearch \
 --discovery.zen.publish_timeout=300s \
 --http.port=9200 \
 --transport.tcp.port=9300 \
---transport.publish_port=${PORT0}
+--transport.publish_port=${PORT1}
