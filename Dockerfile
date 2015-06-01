@@ -5,6 +5,9 @@ RUN apt-get -y install curl
 RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-get install -y nodejs
 
+RUN /elasticsearch/bin/plugin -install royrusso/elasticsearch-HQ
+RUN echo "http.cors.enabled: true" >> /elasticsearch/config/elasticsearch.yml
+
 ADD ./elasticsearch-marathon-bootstrap.sh /usr/local/bin/
 ADD ./elasticsearches.js /usr/local/bin/
 
